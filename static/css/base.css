@@ -1,0 +1,17 @@
+.focus-input:focus {
+    outline: none;
+    border: 2px solid rgb(31, 134, 244);
+
+
+}
+
+.focus {
+    border: 2px solid rgba(31, 134, 244, 0);
+    border-radius: 20px;
+
+}
+
+.focus-div:focus {
+
+    border: 2px solid blue;
+}

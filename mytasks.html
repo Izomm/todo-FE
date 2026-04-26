@@ -19,6 +19,8 @@
 
 
     <script src="/static/script/index.js"></script>
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+
     <link rel="stylesheet" href="/static/css/base.css">
     <title>Document</title>
 </head>
@@ -27,8 +29,8 @@
     <header>
         <nav class="flex justify-between mx-6 my-2 mt-4">
             <ul class="flex items-center">
-                <img class="w-4" src="/static/images/icons/shooting-star.png" />
-                <a href="">Todo AI</a>
+                <img class="w-4" src="/static/images/icons/1hero.png" />
+                <a href="" class="ms-2 text-[#5f02f6] font-bold">Todo AI</a>
 
             </ul>
             <ul class="flex justify-between ">
@@ -60,18 +62,31 @@
     </header>
     <main class="mx-6 mt-12">
 
-        <div class="flex flex-col mx-8">
+        <div class="flex flex-col mx-8  purple-grad-bg p-8 rounded-4xl text-white">
             <div class="flex items-center mb-8">
                 <img class="w-6" src="static/images/icons/star.png" alt="">
-                <h3 class="ms-2 text-2xl font-bold">AI Assitant</h3>
+                <h3 class="ms-2 text-2xl font-bold">AI Assistant</h3>
             </div>
             <div class="mb-6">
                 <p class="text-xl">What's on your mind? Tell me your mood for the day, and i'll suggest a path.</p>
             </div>
-            <div class="border border-black-100 mt-4 mb-12 rounded-2xl h-32"><input type="text"></div>
-            <div class="flex items-center justify-center bg-blue-500 py-4 rounded-xl text-white">
-                <img class="w-6" src="static/images/icons/paper-plane(1).png" alt="">
-                <p class="ms-4 font-bold">Get Suggestions</p>
+            <div class="pb-8">
+
+                <textarea placeholder="e.g i want to be productive today but feel a bit tired.." id="prompt"
+                    class=" w-full bg-gray-100/20  text-white p-6 rounded-2xl   resize-none h-30 overflow-hidden ">
+
+                    </textarea>
+
+            </div>
+            <div class="flex items-center justify-center bg-white text-blue-600 py-4 rounded-xl ">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="#6b20ff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="lucide lucide-send-icon lucide-send">
+                    <path
+                        d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z" />
+                    <path d="m21.854 2.147-10.94 10.939" />
+                </svg>
+                <p class="ms-4 font-bold text-[#5f02f6]">Get Suggestions</p>
             </div>
         </div>
 
@@ -83,14 +98,21 @@
             <div class="mt-12">
                 <div class="mb-6">
                     <div class="flex font-bold items-center mb-2 ">
-                        <img class="w-6" src="static/images/icons/categories.png" alt="">
-                        <h3 class="ms-2 text-2xl">Today's Focus</h3>
+
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="#6b20ff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-layout-template-icon lucide-layout-template">
+                            <rect width="18" height="7" x="3" y="3" rx="1" />
+                            <rect width="9" height="7" x="3" y="14" rx="1" />
+                            <rect width="5" height="7" x="16" y="14" rx="1" />
+                        </svg>
+                        <h3 class="ms-2 text-2xl text-[#5f02f6]">Today's Focus</h3>
                     </div>
                     <p class="text-gray-500">Organize your thoughts and stay on track</p>
                 </div>
 
                 <div class="w-full">
-                    <textarea id="prompt" placeholder="Add somehting to your list..." rows="1"
+                    <textarea id="prompt" placeholder="Add something to your list..." rows="1"
                         class="focus w-full bg-gray-100 rounded-2xl px-4 py-3 focus-input resize-none h-30 overflow-hidden pt-6">
 
                     </textarea>
@@ -137,8 +159,8 @@
                             <p class="ms-1">24/04/226</p>
                         </div>
 
-                        <div class="ms-6 bg-pink-200 px-1 rounded ">
-                            <p class="font-bold text-red-600">AI</p>
+                        <div class="ms-6 bg-[#5f02f6]/20 px-1 rounded ">
+                            <p class="font-bold text-[#5f02f6]">AI</p>
                         </div>
                     </div>
 
@@ -163,8 +185,8 @@
                             <p class="ms-1">24/04/226</p>
                         </div>
 
-                        <div class="ms-6 bg-pink-200 px-1 rounded ">
-                            <p class="font-bold text-red-600">AI</p>
+                        <div class="ms-6 bg-[#5f02f6]/20 px-1 rounded ">
+                            <p class="font-bold text-[#5f02f6]">AI</p>
                         </div>
                     </div>
 
@@ -176,6 +198,10 @@
 
 
     </main>
+
+    <script>
+        lucide.createIcons()
+    </script>
 
 </body>
 
